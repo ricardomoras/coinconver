@@ -10,8 +10,8 @@ import java.net.http.HttpResponse;
 
 public class Connection {
 
-    public ForeingExchange findCurrency(String currency){
-        URI direccion = URI.create("https://v6.exchangerate-api.com/v6/a7e2f0427961f1dcd1fe02fa/latest/"+currency);
+    public ForeingExchange findCurrency(String coin){
+        URI direccion = URI.create("https://v6.exchangerate-api.com/v6/a7e2f0427961f1dcd1fe02fa/latest/"+coin);
 
         HttpClient client = HttpClient.newHttpClient();
         HttpRequest request = HttpRequest.newBuilder()
@@ -22,7 +22,7 @@ public class Connection {
                     .send(request, HttpResponse.BodyHandlers.ofString());
             return new Gson().fromJson(response.body(), ForeingExchange.class);
         } catch (Exception e) {
-            throw new RuntimeException("No encontre la pelicula");
+            throw new RuntimeException("No encontre la ruta");
         }
 
     }
