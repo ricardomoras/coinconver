@@ -1,9 +1,14 @@
 package mx.ricardo.app.coinconver.menu;
 
-public class Menu {
+public class TextInMenu {
 
+    /**
+     * Método que devuelve el texto del menú con las opciones disponibles.
+     *
+     * @return Texto del menú con las opciones disponibles.
+     */
     public String getLetra() {
-        String letra = """
+        return """
                 **************************************************************
                 Sea bienvenido/a al Conversor de Moneda =]
                                 
@@ -17,6 +22,5 @@ public class Menu {
                 Elija una opción válida:
                 **************************************************************
                 """;
-        return letra;
     }
 }
