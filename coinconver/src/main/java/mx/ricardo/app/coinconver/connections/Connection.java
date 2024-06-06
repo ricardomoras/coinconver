@@ -19,7 +19,7 @@ public class Connection {
      */
     public ForeignExchange findCurrency(String coin){
         // Creación de la URI para la consulta a la API
-        URI uri = URI.create("https://v6.exchangerate-api.com/v6/a7e2f0427961f1dcd1fe02fa/latest/"+coin);
+        URI uri = URI.create("https://v6.exchangerate-api.com/v6/key/latest/"+coin);
 
         // Creación de un cliente HTTP
         HttpClient client = HttpClient.newHttpClient();
